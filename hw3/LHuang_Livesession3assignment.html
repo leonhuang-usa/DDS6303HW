@@ -162,6 +162,9 @@ awesome-public-datasets/</code></pre>
 <ol start="3" style="list-style-type: lower-alpha">
 <li>Please use one apply function (to review: swirl() modules 11, 12) to output the means of Age, Fare, and Survival. Make sure the output is a real number for all three means.</li>
 </ol>
+<pre class="r"><code>    vapply(df[,c(2,6,10)], function(x) mean(x,na.rm=TRUE), numeric(1))</code></pre>
+<pre><code>##   Survived        Age       Fare 
+##  0.3838384 29.6991176 32.2042080</code></pre>
 </div>
 <div id="function-building-30-points-you-research-sleep-and-just-got-your-first-data-set.-later-youall-have-another-dataset-with-the-same-column-names-so-you-want-to-create-a-helper-function-that-you-can-analyze-this-dataset-and-the-next.-load-sleep_data_01.csv-found-at-httptalklab.psy.gla.ac.ukl1_labslab_1homeworkindex.html.-questions-3a-through-3d-should-be-answered-in-functionx.-3e-can-be-outside-of-the-function." class="section level1">
 <h1>3. Function Building (30 points): You research sleep and just got your first data set. Later, youâll have another dataset with the same column names, so you want to create a helper function that you can analyze this dataset and the next. Load sleep_data_01.csv (found at <a href="http://talklab.psy.gla.ac.uk/L1_labs/lab_1/homework/index.html" class="uri">http://talklab.psy.gla.ac.uk/L1_labs/lab_1/homework/index.html</a>). Questions 3A through 3D should be answered in function(x){}. 3E can be outside of the function.</h1>

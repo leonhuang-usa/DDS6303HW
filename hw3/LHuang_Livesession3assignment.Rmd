@@ -38,7 +38,9 @@ barplot(table(df$Sex), xlab="Sex", ylab="Count", main="Plot of Sex")
 ```
 
 c.	Please use one apply function (to review: swirl() modules 11, 12) to output the means of Age, Fare, and Survival.  Make sure the output is a real number for all three means.
-
+```{r, echo=TRUE}
+    vapply(df[,c(2,6,10)], function(x) mean(x,na.rm=TRUE), numeric(1))
+```
 
 
 #3.	Function Building (30 points): You research sleep and just got your first data set.  Later, you’ll have another dataset with the same column names, so you want to create a helper function that you can analyze this dataset and the next.  Load sleep_data_01.csv (found at http://talklab.psy.gla.ac.uk/L1_labs/lab_1/homework/index.html).  Questions 3A through 3D should be answered in function(x){}.  3E can be outside of the function. 
